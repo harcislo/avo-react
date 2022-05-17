@@ -1,0 +1,25 @@
+$text_sm: 12px;
+$text_lg: 18px;
+$text_xl: 24px;
+$text_xxl: 32px;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.text {
+	&-sm {
+		font-size: $text_sm;
+	}
+	&-lg {
+		font-size: $text_lg;
+	}
+	&-xl {
+		font-size: $text_xl;
+	}
+	&-xxl {
+		font-size: $text_xxl;
+	}
+}

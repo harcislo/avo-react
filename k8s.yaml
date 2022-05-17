@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: avo-web
+  namespace: __NAMESPACE__
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: avo-web
+  template:
+    metadata:
+      namespace: __NAMESPACE__
+      labels:
+        app: avo-web
+    spec:
+      containers:
+        - name: avo-web
+          image: cr.yandex/__CONTAINER_REGISTRY_ID__/avo-web:__VERSION__
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 9000

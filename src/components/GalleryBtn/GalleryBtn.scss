@@ -1,0 +1,21 @@
+//rename this to gallery button
+.green-btn {
+	text-decoration: none;
+	background: linear-gradient(101.52deg, #e1e53c 31.48%, #acd044 74.87%);
+	box-shadow: 3px 8px 16px rgba(172, 208, 68, 0.35);
+	border: none;
+	transition: all 0.3s;
+	&:hover {
+		transform: scale(1.12);
+	}
+
+	&-icon {
+		width: 33px;
+	}
+}
+
+.gallery-btn {
+	@media screen and (max-width: 620px) {
+		display: none !important;
+	}
+}

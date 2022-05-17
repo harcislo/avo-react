@@ -1,0 +1,10 @@
+.gallery__tranding-loader {
+	@media (max-width: 840px) {
+		display: none;
+	}
+}
+
+.gallery__tranding-main-loader {
+	max-width: 1440px !important;
+	margin: auto !important;
+}

@@ -1,0 +1,11 @@
+.authors {
+	margin-top: 22px;
+	margin-bottom: 6px;
+}
+
+.authors__list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}

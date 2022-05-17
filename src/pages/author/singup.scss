@@ -1,0 +1,39 @@
+.downloadAvocado {
+  display: inline;
+  width: 60px;
+  height: 100px;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+.registration-photos {
+  &-upload {
+    &-title {
+      margin-bottom: 8px;
+    }
+    &-dragger {
+      .ant-upload {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+      }
+    }
+
+    &-description {
+      padding: 12px 0px;
+    }
+  }
+
+  &-button-submit {
+    margin-top: 16px;
+  }
+}
+
+.author-signup-2fa-group-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.author-signup-2fa-button-submit {
+  margin-top: 16px;
+  margin-bottom: 0;
+}

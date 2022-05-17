@@ -1,0 +1,29 @@
+.registration__heading {
+}
+
+.registration__heading .big-title {
+	margin-bottom: 13px;
+}
+
+.registration__desc {
+	text-align: center;
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 28px;
+}
+
+@media (max-width: 600px) {
+	.registration__desc,
+	.registration__heading .big-title {
+		text-align: center;
+	}
+}
+
+@media (max-width: 375px) {
+	.registration__heading .big-title {
+		font-size: 38px;
+	}
+	.registration__desc {
+		font-size: 14px;
+	}
+}

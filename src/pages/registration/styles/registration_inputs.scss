@@ -1,0 +1,93 @@
+.registration-inputs {
+	margin: 0 15px;
+
+	&__description {
+		margin-top: 10px;
+		text-align: center;
+		font-size: 14px;
+		color: silver;
+	}
+	.big-title {
+		font-weight: 400;
+	}
+
+	.block-radius {
+		max-width: 590px;
+	}
+
+	.registration-inputs__form {
+		margin-top: 26px;
+	}
+
+	.registration-inputs__wrap {
+		position: relative;
+		display: block;
+		max-width: 355px;
+		width: 100%;
+		height: 50px;
+		margin: 0 auto 12px;
+	}
+
+	.registration-inputs__input {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(0deg, rgba(196, 196, 196, 0.2), rgba(196, 196, 196, 0.2));
+		border: 1px solid #dcdcdc;
+		border-radius: 9px 25px;
+		padding: 0 24px;
+		font-size: 14px;
+	}
+
+	.registration-inputs__input::placeholder {
+		color: #000;
+	}
+
+	.registration-inputs__code {
+		position: absolute;
+		text-decoration-line: underline;
+		color: #add145;
+		font-size: 14px;
+		background: none;
+		border: none;
+		right: 33px;
+		top: 50%;
+		transform: translateY(-50%);
+		cursor: pointer;
+	}
+
+	.registration-inputs__btn {
+		margin: 26px auto 0;
+		cursor: pointer;
+	}
+
+	@media (max-width: 430px) {
+		.registration-inputs__wrap {
+			max-width: 280px;
+		}
+		.big-title {
+			font-size: 42px;
+		}
+	}
+
+	@media (max-width: 350px) {
+		.registration-inputs__wrap {
+			max-width: 260px;
+		}
+		.big-title {
+			font-size: 38px;
+		}
+	}
+
+	&-bot-button {
+		width: 100%;
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	&-error-message {
+		margin-top: 26px;
+		margin-left: 40px;
+		margin-right: 40px;
+		text-align: center;
+	}
+}

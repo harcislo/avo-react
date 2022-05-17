@@ -1,0 +1,67 @@
+.global-loader {
+	height: 100vh;
+	width: 100vw;
+	margin: auto;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	&-logo {
+		align-self: flex-end;
+	}
+	&-icon {
+		align-self: flex-start;
+	}
+
+	&-icon,
+	&-icon:before,
+	&-icon:after {
+		border-radius: 50%;
+		width: 2.0em;
+		height: 2.0em;
+		-webkit-animation-fill-mode: both;
+		animation-fill-mode: both;
+		-webkit-animation: ellipsing 1.8s infinite ease-in-out;
+		animation: ellipsing 1.8s infinite ease-in-out;
+
+		@keyframes ellipsing {
+			0%,
+			80%,
+			100% {
+				box-shadow: 0 2.0em 0 -1.3em;
+			}
+			40% {
+				box-shadow: 0 2.0em 0 0;
+			}
+		}
+	}
+
+	&-icon {
+		position: relative;
+		margin-top: -10px;
+		color: rgb(212, 229, 60);
+		font-size: 13px;
+		text-indent: -9999em;
+		-webkit-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		transform: translateZ(0);
+		-webkit-animation-delay: -0.16s;
+		animation-delay: -0.16s;
+	}
+
+	&-icon:before,
+	&-icon:after {
+		position: absolute;
+		top: 0;
+		content: '';
+	}
+
+	&-icon:before {
+		left: -3.5em;
+		-webkit-animation-delay: -0.32s;
+		animation-delay: -0.32s;
+	}
+
+	&-icon:after {
+		left: 3.5em;
+	}
+}

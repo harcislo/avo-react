@@ -1,0 +1,11 @@
+.image__wrap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: filter 1s linear;
+	filter: opacity(0);
+
+	&.loaded {
+		filter: opacity(1);
+	}
+}

@@ -1,0 +1,90 @@
+.by-nft_wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+
+	.by-nft_wrapper_form {
+		margin-right: 20px;
+		margin-left: 20px;
+		margin-top: 50px;
+		max-width: 555px;
+		padding: 30px;
+		border-radius: 40px 15px;
+		box-shadow: 0px 4px 39px rgba(49, 23, 100, 0.2);
+
+		.by-nft_title {
+			max-width: 225px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			border-left: 7px solid #e1e53c;
+
+			h2 {
+				padding: 0;
+				margin: 0;
+				color: #000a40;
+			}
+		}
+
+		.by-nft_amount {
+			display: flex;
+			align-items: center;
+			margin-top: 20px;
+
+			.ant-form-item {
+				.ant-input {
+					width: 230px;
+				}
+
+				.ant-form-item-label {
+					label {
+						font-size: 18px;
+						line-height: 26px;
+						color: #000000;
+						width: 150px;
+					}
+				}
+			}
+		}
+
+		.by-nft_item {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			margin-bottom: 20px;
+
+			span {
+				display: block;
+				width: 150px;
+				font-weight: 300;
+				font-size: 18px;
+				line-height: 26px;
+				color: #000000;
+			}
+		}
+
+		.by-nft_btn {
+			margin: 30px 0 15px 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.by-nft_wrapper_img {
+		margin-right: 20px;
+		margin-left: 20px;
+		max-width: 555px;
+		padding: 12px;
+		background: #edf5ed;
+		border-radius: 20px;
+
+		.by-nft_img {
+			img {
+				border-radius: 20px;
+			}
+		}
+	}
+}

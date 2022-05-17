@@ -1,0 +1,205 @@
+@import "../../../assets/styles/colors.scss";
+
+.how__work {
+	&-content {
+		max-width: 1140px;
+		width: 100%;
+		margin: 215px auto;
+		@media screen and(max-width: 768px) {
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+		& .content__title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 50px;
+			@media screen and(max-width: 768px) {
+				justify-content: center;
+			}
+
+			& .title {
+				display: flex;
+
+				& .title__img {
+					position: relative;
+					margin-right: 40px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 55px;
+					height: 55px;
+					@media screen and(max-width: 768px) {
+						margin-right: 9px;
+					}
+					&:before {
+						content: " ";
+						position: absolute;
+						top: 5px;
+						width: 55px;
+						height: 55px;
+						background: $silver;
+						border-radius: 100%;
+					}
+					& img {
+						position: relative;
+						max-width: 55px;
+						@media screen and(max-width: 768px) {
+							max-width: 55px;
+						}
+					}
+				}
+
+				& .title__name {
+					text-align: left;
+					@media screen and(max-width: 768px) {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+					}
+
+					& h2 {
+						font-family: Georgia Pro;
+						font-style: normal;
+						font-weight: 600;
+						font-size: 48px;
+						line-height: 55px;
+						color: $blue;
+						@media screen and(max-width: 768px) {
+							font-size: 24px;
+							line-height: 27px;
+						}
+					}
+
+					& p {
+						font-family: Gilroy;
+						font-style: normal;
+						font-weight: 300;
+						font-size: 18px;
+						line-height: 25px;
+						color: $black;
+						@media screen and(max-width: 768px) {
+							font-size: 12px;
+							line-height: 15px;
+						}
+					}
+				}
+			}
+
+			@media screen and(max-width: 768px) {
+				& .button_start_use {
+					display: none;
+				}
+			}
+		}
+
+		& .content__items {
+			gap: 8px;
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@media screen and(max-width: 768px) {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+
+			& .item {
+				width: 262px;
+				position: relative;
+				background: linear-gradient(180deg, rgba(243, 243, 243, 0) 0%, #fafafa 100%);
+				border-radius: 39px;
+				padding: 9px 11px;
+				z-index: 2;
+				@media screen and(max-width: 768px) {
+					background: none;
+				}
+				.item__img {
+					position: relative;
+					max-width: 238px;
+					margin: 0 auto;
+
+					& .item__number {
+						position: absolute;
+						top: 5px;
+						left: 30%;
+						width: 27px;
+						border-radius: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						background: linear-gradient(180deg, #e1e53c 0%, #acd044 100%);
+						height: 27px;
+
+						font-family: Gilroy;
+						font-style: normal;
+						font-weight: 500;
+						font-size: 14px;
+						line-height: 25px;
+						color: $black;
+					}
+
+					& img {
+						margin: 0 auto;
+						padding: 23px 20px 21px 24px;
+						border: 15px solid #f5f6f5;
+						border-radius: 100%;
+						background: linear-gradient(115.43deg, #3cbce5 21.81%, #6044d0 77.56%);
+					}
+				}
+
+				& h5 {
+					font-family: Gilroy;
+					font-style: normal;
+					font-weight: 500;
+					font-size: 18px;
+					line-height: 25px;
+					color: $black;
+					padding-top: 15px;
+					text-align: center;
+				}
+
+				& p {
+					min-height: 50px;
+					padding: 4px 0 8px 0;
+					font-family: Gilroy;
+					font-style: normal;
+					font-weight: 300;
+					font-size: 14px;
+					line-height: 20px;
+					text-align: center;
+					color: $black;
+					margin: 0 auto;
+
+					max-width: 240px;
+					width: 100%;
+					@media screen and(max-width: 768px) {
+						font-size: 12px;
+						line-height: 18px;
+						font-weight: 400;
+						max-width: 250px;
+					}
+				}
+
+				&:not(:last-child):before {
+					content: "";
+					position: absolute;
+					top: 30%;
+					width: 100%;
+					height: 3px;
+					right: -35%;
+					border-top: 1px dashed #412479;
+					@media screen and(max-width: 768px) {
+						display: none;
+					}
+				}
+
+				&:not(:last-child) {
+					@media screen and(max-width: 768px) {
+					}
+				}
+			}
+		}
+	}
+}

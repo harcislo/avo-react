@@ -1,0 +1,47 @@
+[
+	{
+		"name": "Тюрин Александр",
+		"image": "turin_a.jpg",
+		"description": "Фаундер AvoNFT"
+	},
+	{
+		"name": "Тюрин Кирилл",
+		"image": "turin_k.jpg",
+		"description": "Департамент комьюнити"
+	},
+	{
+		"name": "Бородин Богдан",
+		"image": "borodin_b.jpg",
+		"description": "PM департамент программных разработок"
+	},
+	{
+		"name": "Груй Сергей",
+		"image": "gruy_s.jpg",
+		"description": "Департамент модерации"
+	},
+	{
+		"name": "Литучий Владимир",
+		"image": "lituchy_v.jpg",
+		"description": "Юридический департамент"
+	},
+	{
+		"name": "Соколов Руслан",
+		"image": "sokolov_r.jpg",
+		"description": "Руководитель направления АВО Гейм"
+	},
+	{
+		"name": "Коваленко Алексей",
+		"image": "kovalenko_a.jpg",
+		"description": "Руководитель направления АВО Спорт"
+	},
+	{
+		"name": "Кушаков Антон",
+		"image": "kushakov_a.jpg",
+		"description": "Руководитель направления АВО Дизайн"
+	},
+	{
+		"name": "Межеков Максим",
+		"image": "mezhekov_m.jpg",
+		"description": "Департамент администрирования"
+	}
+]

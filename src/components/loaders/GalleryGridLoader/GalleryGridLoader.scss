@@ -1,0 +1,7 @@
+.gallery__grid-loader {
+	width: 100%;
+
+	@media (max-width: 840px) {
+		display: none;
+	}
+}

@@ -1,0 +1,30 @@
+@import "../../../assets/styles/colors.scss";
+
+.button_start_use {
+	border: none;
+	position: relative;
+	max-width: 230px;
+	width: 100%;
+	height: 50px;
+	background: linear-gradient(280deg, #e1e53c 31.48%, #acd044 74.87%);
+	box-shadow: 3px 8px 16px rgba(172, 208, 68, 0.35);
+	border-radius: 8px 25px;
+
+	font-family: Gilroy;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 16px;
+	color: $dark_green;
+	padding: 0 29px 0 61px;
+	&:before {
+		content: " ";
+		position: absolute;
+		background: url("../../../assets/icons/avocado.svg") no-repeat;
+		top: 0;
+		left: 20px;
+		width: 30px;
+		height: 100%;
+		background-position: center center;
+	}
+}

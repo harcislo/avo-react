@@ -1,0 +1,116 @@
+@font-face {
+	font-family: "Gilroy";
+	src: url("../../assets/fonts/Gilroy/Gilroy-SemiBoldItalic.eot");
+	src: local("Gilroy SemiBold"), local("Gilroy-SemiBold"),
+		url("../../assets/fonts/Gilroy/Gilroy-SemiBold.eot") format("embedded-opentype"),
+		url("../../assets/fonts/Gilroy/Gilroy-SemiBold.woff") format("woff"),
+		url("../../assets/fonts/Gilroy/Gilroy-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../../assets/fonts/Gilroy/Gilroy-Medium.eot");
+	src: local("Gilroy Medium"), local("Gilroy-Medium"),
+		url("../../assets/fonts/Gilroy/Gilroy-Medium.eot?#iefix") format("embedded-opentype"),
+		url("../../assets/fonts/Gilroy/Gilroy-Medium.woff") format("woff"),
+		url("../../assets/fonts/Gilroy/Gilroy-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../../assets/fonts/Gilroy/Gilroy-Regular.eot");
+	src: local("Gilroy Regular"), local("Gilroy-Regular"),
+		url("../../assets/fonts/Gilroy/Gilroy-Regular.eot?#iefix") format("embedded-opentype"),
+		url("../../assets/fonts/Gilroy/Gilroy-Regular.woff") format("woff"),
+		url("../../assets/fonts/Gilroy/Gilroy-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy";
+	src: url("../../assets/fonts/Gilroy/Gilroy-Light.eot");
+	src: local("Gilroy Light"), local("Gilroy-Light"),
+		url("../../assets/fonts/Gilroy/Gilroy-Light.eot?#iefix") format("embedded-opentype"),
+		url("../../assets/fonts/Gilroy/Gilroy-Light.woff") format("woff"),
+		url("../../assets/fonts/Gilroy/Gilroy-Light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Georgia Pro";
+	src: url("../../assets/fonts/GeorgiaPro/GeorgiaPro-Semibold.eot");
+	src: local("Gilroy SemiBold"), local("Gilroy-SemiBold"),
+		url("../../assets/fonts/GeorgiaPro/GeorgiaPro-Semibold.eot?#iefix") format("embedded-opentype"),
+		url("../../assets/fonts/GeorgiaPro/GeorgiaPro-Semibold.woff") format("woff"),
+		url("../../assets/fonts/GeorgiaPro/GeorgiaPro-Semibold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+html {
+	scroll-behavior: auto;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: "Gilroy", sans-serif;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+main {
+	margin-top: 50px;
+	min-height: 80vh;
+}
+
+.App {
+	text-align: left;
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

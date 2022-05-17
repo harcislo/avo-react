@@ -1,0 +1,22 @@
+.works__load-more {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 15px auto 0;
+	font-size: 16px;
+	color: #0e4500;
+	height: 50px;
+	width: 220px;
+	border-radius: 8px 25px;
+	cursor: pointer;
+	margin-bottom: 70px;
+
+	&:hover {
+		transform: scale(1.1);
+	}
+
+	img {
+		margin-left: 23px;
+		transform: rotate(90deg);
+	}
+}

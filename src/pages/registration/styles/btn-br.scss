@@ -1,0 +1,39 @@
+.border-btn {
+	position: relative;
+	font-size: 14px;
+	cursor: pointer;
+	background: #fff;
+	padding: 10px;
+	border-radius: 25px 8px;
+	max-width: 122px;
+	width: 100%;
+	color: #0e4500;
+	font-weight: 400;
+	border: none;
+	transition: all 0.3s;
+}
+
+.border-btn:hover {
+	transform: scale(1.2);
+}
+
+.border-btn:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	margin: -2px;
+	border-radius: 25px 8px;
+	background: linear-gradient(101.52deg, #e1e53c 31.48%, #acd044 74.87%);
+}
+
+.border-btn.reverse {
+	border-radius: 8px 25px;
+}
+
+.border-btn.reverse:before {
+	border-radius: 8px 25px;
+}

@@ -1,0 +1,62 @@
+.user_info_wrapper {
+	margin: 0 auto;
+	max-width: 1200px;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	text-align: center;
+}
+
+.header_img {
+	margin: 0 auto;
+	img {
+		border-radius: 20px;
+		margin: 0 auto;
+	}
+}
+
+.userLogo {
+	box-shadow: 1px 5px 10px rgb(158, 158, 158);
+	max-width: 150px;
+	max-height: 150px;
+	background: #ffffff;
+	border-radius: 50%;
+	border: 7px solid #ffffff;
+}
+
+.user_title {
+	display: flex;
+	margin-top: 20px;
+	color: #000a40;
+	align-items: center;
+}
+
+.user_title > img {
+	margin-left: 15px;
+	width: 35px;
+	height: 35px;
+}
+
+.social_buttons > ul {
+	margin-top: 30px;
+	display: flex;
+}
+
+.social_buttons > img {
+	width: 25px;
+}
+
+.user_tabs {
+	margin: 25px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.user_gallery_btn {
+	width: 210px;
+}
+.gallery_user {
+	margin-bottom: 100px;
+}

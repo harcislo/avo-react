@@ -1,0 +1,38 @@
+.categories {
+	margin-top: 53px;
+}
+
+.categories__title {
+	font-family: "Georgia Pro", sans-serif;
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+
+	// @media (max-width: 520px) {
+	//     display: none;
+	// }
+}
+
+.categories__title:after {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: #cbcbcb;
+	bottom: 5px;
+	margin-left: 10px;
+}
+
+.categories__list {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media (max-width: 520px) {
+	.categories__list {
+		display: none;
+	}
+}

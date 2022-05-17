@@ -1,0 +1,88 @@
+stages:
+  - build
+  - deploy
+
+build: 
+  stage: build
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  image: docker:19.03.1-dind
+  services:
+    - docker:19.03.12-dind
+  script:
+    - cat key.json | docker login --username json_key --password-stdin cr.yandex
+    - docker build -t cr.yandex/$DEV_CONTAINER_REGISTRY_ID/avo-web:gitlab-$CI_COMMIT_SHORT_SHA  --build-arg node_env=development .
+  only:
+   - merge_requests
+
+build-staging:
+  stage: build
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  image: docker:19.03.1-dind
+  services:
+    - docker:19.03.12-dind
+  script:
+    - cat key.json | docker login --username json_key --password-stdin cr.yandex
+    - docker build -t cr.yandex/$DEV_CONTAINER_REGISTRY_ID/avo-web:gitlab-$CI_COMMIT_SHORT_SHA --build-arg node_env=staging .
+    - docker push cr.yandex/$DEV_CONTAINER_REGISTRY_ID/avo-web:gitlab-$CI_COMMIT_SHORT_SHA
+  only:
+    - staging
+
+build-production:
+  stage: build
+  variables:
+    DOCKER_TLS_CERTDIR: "/certs"
+  image: docker:19.03.1-dind
+  services:
+    - docker:19.03.12-dind
+  script:
+    - cat key.json | docker login --username json_key --password-stdin cr.yandex
+    - docker build -t cr.yandex/$CONTAINER_REGISTRY_ID/avo-web:gitlab-$CI_COMMIT_SHORT_SHA --build-arg node_env=production .
+    - docker push cr.yandex/$CONTAINER_REGISTRY_ID/avo-web:gitlab-$CI_COMMIT_SHORT_SHA
+  only:
+    - main
+      
+deploy-staging:
+  stage: deploy
+  variables:
+    CLOUDSDK_CONTAINER_CLUSTER: "avo-kube"
+    CLOUDSDK_COMPUTE_ZONE: "ru-central1-a"
+  image:
+    name: bitnami/kubectl:latest
+    entrypoint: [""]
+  script:
+    - kubectl config set-cluster k8s --server="$DEV_KUBE_URL" --insecure-skip-tls-verify=true
+    - kubectl config set-credentials admin --token="$DEV_KUBE_TOKEN"
+    - kubectl config set-context default --cluster=k8s --user=admin
+    - kubectl config use-context default
+    # CONTAINER REGISTRY CONFIGURATION
+    - sed -i "s/__CONTAINER_REGISTRY_ID__/$DEV_CONTAINER_REGISTRY_ID/" k8s.yaml
+    - sed -i "s/__VERSION__/gitlab-$CI_COMMIT_SHORT_SHA/" k8s.yaml
+    # OTHER KUBERNETES CONFIGURATIONS
+    - sed -i "s/__NAMESPACE__/staging/" k8s.yaml
+    - kubectl apply -f k8s.yaml
+  only:
+    - staging
+
+deploy-production:
+  stage: deploy
+  variables:
+    CLOUDSDK_CONTAINER_CLUSTER: "avo-kube"
+    CLOUDSDK_COMPUTE_ZONE: "ru-central1-a"
+  image:
+    name: bitnami/kubectl:latest
+    entrypoint: [""]
+  script:
+    - kubectl config set-cluster k8s --server="$KUBE_URL" --insecure-skip-tls-verify=true
+    - kubectl config set-credentials admin --token="$KUBE_TOKEN"
+    - kubectl config set-context default --cluster=k8s --user=admin
+    - kubectl config use-context default
+    # CONTAINER REGISTRY CONFIGURATION
+    - sed -i "s/__CONTAINER_REGISTRY_ID__/$CONTAINER_REGISTRY_ID/" k8s.yaml
+    - sed -i "s/__VERSION__/gitlab-$CI_COMMIT_SHORT_SHA/" k8s.yaml
+     # OTHER KUBERNETES CONFIGURATIONS
+    - sed -i "s/__NAMESPACE__/prod/" k8s.yaml
+    - kubectl apply -f k8s.yaml
+  only:
+    - main
